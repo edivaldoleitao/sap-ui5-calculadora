@@ -1,0 +1,16 @@
+<mvc:View controllerName="sap.calculadora.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        
+        <content>
+            <VBox id="vbox">
+                <Text text="valor 1" id="txt1"/>
+                <Input value="" id="valor1" type="Number" />
+                <Text text="valor 2" id="txt2"/>
+                <Input value="" id="valor2" type="Number"/>
+            </VBox>
+        </content>
+        
+    </Page>
+</mvc:View>
