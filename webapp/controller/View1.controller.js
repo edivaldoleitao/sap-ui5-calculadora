@@ -14,6 +14,9 @@ sap.ui.define([
 
             },
             onClear: function () {
+                debugger
+                this.getView().byId("valor1").setValue("");
+                this.getView().byId("valor2").setValue("");
 
             },
             onCalc: function() {
