@@ -6,7 +6,7 @@ sap.ui.define([
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, MessageBox) {
         "use strict";
 
         return Controller.extend("sap.calculadora.project1.controller.View1", {
@@ -17,27 +17,28 @@ sap.ui.define([
 
             },
             onCalc: function() {
+                debugger
                 var valor1 = Number(this.getView().byId("valor1").getValue());
                 var valor2 = Number(this.getView().byId("valor2").getValue());
                 var operacao = this.getView().byId("select").getSelectedKey();
                 var result;
 
                 switch (operacao) {
-                    case '+':
+                    case 'soma':
                         result = valor1 + valor2;
                         break;
-                    case '-':
+                    case 'subtracao':
                         result = valor1 - valor2;
                         break;
-                    case '*':
+                    case 'multiplicacao':
                         result = valor1*valor2;
                         break;
-                    case '/':
+                    case 'divisao':
                         result = valor1/valor2;
                         break;
                 }
 
-                MessageBox.success("O valor calculado foi: "+ result);
+                MessageBox.success("O valor calculado foi: "+result);
             }
         });
     });
